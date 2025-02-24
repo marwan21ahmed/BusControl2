@@ -9,26 +9,40 @@
     <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js"></script>
 </head>
 <style>
-    body{
+    body {
         background-image: url(LS2025.jpg);
         background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .c{
-        
-        height: 500px;
-        width: 100%;
-       
+    .form-container {
+        max-width: 400px;
+        width: 90%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 576px) {
+        .form-container {
+            width: 95%;
+            padding: 15px;
+        }
     }
 </style>
-<body class="col-12">
+<body>
     
-    <div class="c d-flex justify-content-center align-items-center">
-        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-
-            <h2 class="text-primary">Enter Your Employee ID</h2>
-            <input type="text" id="employeeId" placeholder="Enter ID" class="form-control">
-            <div class="d-flex justify-content-center align-items-center">
-            <button id="submitBtn" class="btn btn-primary mt-2 ">Submit</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="form-container text-center">
+                    <h2 class="text-primary mb-3">Enter Your Employee ID</h2>
+                    <input type="text" id="employeeId" placeholder="Enter ID" class="form-control mb-3">
+                    <button id="submitBtn" class="btn btn-primary w-100">Submit</button>
+                </div>
             </div>
         </div>
     </div>
